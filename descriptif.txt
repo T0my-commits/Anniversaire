@@ -1,0 +1,25 @@
+Descriptif de ma démarche :
+
+< 1 > Le code html
+
+J'ai mis toutes les balises utiles au fonctionnement de mon site dans le fichier index.html.
+J'ai choisi de ne pas marquer mes balises <li> avec des attributs id pour éviter la répétitivité dans mon
+fichier anniversaire.js (il aurrait fallu définir une action au click pour l'id 'premier', la même pour l'id
+'second', etc..). Puisque seule ma couleur de fond change selon les messages, j'assigne des valeurs différentes à l'attribut
+style dans chacunes des balises.
+
+< 2 > Le code css et jQuery
+
+Le code .css s'organise autour de la logique suivante:
+Les éléments masqués ont la valeur 'none' pour display
+Si l'utilisateur clique sur le message précédent, alors on assigne l'attribut class='titre' à l'élément masqué, ce dernier
+hérite donc de toutes les règles css des messages
+
+Concernant le fichier audio, si l'utilisateur clique sur le dernier message, alors on assigne les attributs autoplay et loop
+à la balise ce qui a pour effet de lancer la piste audio. Concernant l'image, on défini juste une nouvelle regle css qui remplace
+l'ancienne après le click sur le dernier <li>.
+
+< 3 > Pourquoi ces choix ?
+
+Si on souhaite rajouter des messages (<li>), le code jQuery fonctionnera toujours car il s'adapte à la configuration du fichier
+html et css, tandis que si on avait assigner des valeurs différentes d'id à chaques <li>, on resterait bloqués à 3 messages.
