@@ -36,6 +36,7 @@ p
 li
 {
 	display: none;
+	cursor: pointer;
 }
 
 .titre
